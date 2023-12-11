@@ -42,7 +42,7 @@ function selectedFriday() {
 function clickedDays() {
     numDays = 0;
     const selectedDays = document.querySelectorAll(".day-selector .clicked");
-    selectedDays.forEach(li => {
+    selectedDays.forEach(function (li) {
         if(li.classList.contains("clicked")) 
             numDays++;
     });
@@ -59,7 +59,7 @@ function clickedDays() {
 document.getElementById('clear-button').addEventListener('click', clearAll);
 function clearAll() {
     const clickedDays = document.querySelectorAll('.day-selector .clicked');
-    clickedDays.forEach(li => {
+    clickedDays.forEach(function (li) {
         li.classList.remove("clicked");
     });
     numDays = 0;
